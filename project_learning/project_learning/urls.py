@@ -1,4 +1,4 @@
-"""meu_projeto URL Configuration
+"""project_learning URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('soma/<int:n1>/<int:n2>', views.soma),
+    path('sub/<int:n1>/<int:n2>', views.sub),
+    path('divi/<int:n1>/<int:n2>', views.divi)
 ]
